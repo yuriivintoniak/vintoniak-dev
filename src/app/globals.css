@@ -23,6 +23,16 @@
   }
 }
 
+@layer components {
+  .avatar {
+    @apply object-cover rounded-full grayscale-25;
+  }
+
+  .btn {
+    @apply py-3 px-5 rounded-lg font-semibold hover:cursor-pointer transition-colors duration-300 ease-in-out;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
