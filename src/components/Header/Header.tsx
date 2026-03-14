@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
-import { MenuIcon } from './MenuIcon'
+import { Contacts } from './icons/Contacts'
+import { MenuIcon } from './icons/MenuIcon'
 import { usePathname } from 'next/navigation'
 import { headerNavigation } from './constants'
 
@@ -27,9 +28,14 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <button className='hover:cursor-pointer'>
-          <MenuIcon className='lg:hidden' />
-        </button>
+        <div>
+          <Link href="/contacts" className='hidden lg:flex'>
+            <Contacts />
+          </Link>
+          <button className='lg:hidden flex'>
+            <MenuIcon />
+          </button>
+        </div>
       </div>
     </header>
   )
