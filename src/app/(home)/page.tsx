@@ -2,22 +2,23 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <section className='w-full flex justify-between items-center'>
+    <section className='w-full flex flex-col-reverse justify-between items-center gap-10 lg:flex-row lg:gap-5'>
       <div className='flex flex-col gap-5'>
         <div>
-          <p className='mb-1 text-2xl text-text-primary'>
+          <p className='mb-1 text-xl xs:text-2xl text-text-primary'>
             Hello, I'm Yurii
             <span className='ml-0.5'>👋🏻</span>
           </p>
-          <h1 className='text-[90px] leading-22.5 tracking-[-3.6px] font-bold'>
+          <h1 className='text-5xl 2xs:text-6xl xs:text-7xl sm:text-[90px] sm:leading-22.5 tracking-[-2px] font-bold'>
             <span className='text-text-accent'>Full</span> Stack <br /> Developer
           </h1>
         </div>
-        <p className='text-2xl text-text-primary'>
-          I'm a full stack developer living in Ukraine, <br />
-          I'll help you build amazing websites your users will like.
+        <p className='text-xl xs:text-2xl text-text-primary'>
+          I'm a full stack developer living in Ukraine, {" "}
+          <br className='hidden xs:inline' />
+          I'll help you build websites your users will like.
         </p>
-        <div className='flex gap-4 font-semibold'>
+        <div className='flex flex-col xs:flex-row gap-4 font-semibold'>
           <button className='btn text-background bg-text-accent hover:bg-[#8A37F5]'>
             Contact me
           </button>
@@ -26,7 +27,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className='inline-block p-10 rounded-full border border-text-accent/40'>
+      <div className='inline-block p-0 xs:p-5 sm:p-10 rounded-full border border-text-accent/40'>
         <Image
           src='/avatar.jpg'
           width={380}

@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${geistSans.className} flex flex-col h-screen antialiased`}>
+      <body className={`${geistSans.className} flex flex-col min-h-screen antialiased`}>
         <Header />
         <main className='mb-auto p-4 flex-1 flex items-center justify-center'>
           {children}
