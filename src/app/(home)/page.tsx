@@ -1,14 +1,41 @@
+import Image from 'next/image'
+
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
-          Portfolio website
-        </h1>
-        <p className="text-zinc-600 dark:text-zinc-400">
-          Work in progress
+    <section className='w-full flex flex-col-reverse justify-between items-center gap-10 lg:flex-row lg:gap-5'>
+      <div className='flex flex-col gap-5'>
+        <div>
+          <p className='mb-1 text-xl xs:text-2xl text-text-primary'>
+            Hello, I'm Yurii
+            <span className='ml-0.5'>👋🏻</span>
+          </p>
+          <h1 className='text-5xl 2xs:text-6xl xs:text-7xl sm:text-[90px] sm:leading-22.5 tracking-[-2px] font-bold'>
+            <span className='text-text-accent'>Full</span> Stack <br /> Developer
+          </h1>
+        </div>
+        <p className='text-xl xs:text-2xl text-text-primary'>
+          I'm a full stack developer living in Ukraine, {" "}
+          <br className='hidden xs:inline' />
+          I'll help you build websites your users will like.
         </p>
+        <div className='flex flex-col xs:flex-row gap-4 font-semibold'>
+          <button className='btn text-background bg-text-accent hover:bg-[#8A37F5]'>
+            Contact me
+          </button>
+          <button className='btn border hover:text-background hover:bg-foreground'>
+            View my work
+          </button>
+        </div>
       </div>
-    </div>
-  );
+      <div className='inline-block p-0 xs:p-5 sm:p-10 rounded-full border border-text-accent/40'>
+        <Image
+          src='/avatar.jpg'
+          width={380}
+          height={380}
+          className='avatar'
+          alt='Picture of the author'
+        />
+      </div>
+    </section>
+  )
 }
