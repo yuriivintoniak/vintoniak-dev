@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Geist } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/Header/Header'
+import { Footer } from '@/components/Footer/Footer'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -26,6 +27,7 @@ export default function RootLayout({
         <main className='mb-auto p-4 flex-1 flex items-center justify-center'>
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   )
