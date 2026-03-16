@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation'
 import { headerNavigation } from './constants'
 
 export function HeaderNavigation() {
-  const pathname = usePathname();
+  const pathname = usePathname()
 
   return (
     <>
