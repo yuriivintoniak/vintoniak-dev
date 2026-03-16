@@ -10,9 +10,5 @@ export const headerNavigation = [
   {
     label: 'About',
     href: '/about'
-  },
-  // {
-  //   label: 'Contacts',
-  //   href: '/contacts'
-  // }
+  }
 ]
