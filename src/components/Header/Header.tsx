@@ -5,13 +5,13 @@ import { HeaderNavigation } from './HeaderNavigation'
 
 export function Header() {
   return (
-    <header className='py-2'>
+    <header className='py-2 text-xl'>
       <div className='mx-auto p-4 flex items-center justify-between'>
         <div className='font-bold'>
           <Link href='/'>LucaDCZ</Link>
           <span className='text-text-accent text-2xl'>.</span>
         </div>
-        <nav className='hidden lg:flex text-text-primary text-lg font-semibold'>
+        <nav className='hidden lg:flex text-text-primary font-semibold'>
           <HeaderNavigation />
         </nav>
         <div>
