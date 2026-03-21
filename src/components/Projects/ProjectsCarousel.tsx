@@ -6,9 +6,9 @@ export function ProjectsCarousel() {
   return (
     <Marquee speed={50} pauseOnHover gradient={true} gradientColor='var(--background)' gradientWidth={100}>
       {projects.map((project) => (
-        <div 
+        <div
           key={project.id}
-          className='mx-4 w-80 h-52 text-text-primary text-lg border border-text-accent flex items-center justify-center'
+          className='mx-4 w-64 h-40 sm:w-80 sm:h-52 text-text-primary text-lg border border-text-accent flex items-center justify-center'
         >
           {project.id}
         </div>
