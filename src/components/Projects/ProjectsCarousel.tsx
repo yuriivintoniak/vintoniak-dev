@@ -8,9 +8,9 @@ export function ProjectsCarousel() {
       {projects.map((project) => (
         <div
           key={project.id}
-          className='mx-4 w-64 h-40 sm:w-80 sm:h-52 text-text-primary text-lg border border-text-accent flex items-center justify-center'
+          className='mx-4 w-64 h-40 sm:w-80 sm:h-52 text-text-primary 2xs:text-lg border border-text-accent flex items-center justify-center'
         >
-          {project.id}
+          {project.title}
         </div>
       ))}
     </Marquee>
