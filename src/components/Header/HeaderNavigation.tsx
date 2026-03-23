@@ -12,7 +12,7 @@ export function HeaderNavigation() {
         <Link
           key={navItem.href}
           href={navItem.href}
-          className={`mx-8
+          className={`mx-10
             ${pathname === navItem.href ? 'text-text-accent' : ''}`
           }
         >
