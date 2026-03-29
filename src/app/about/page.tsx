@@ -1,4 +1,4 @@
-import { AboutHero } from '@/components/About/AboutHero'
+import { AboutHero } from '@/components/About/AboutHero/AboutHero'
 
 export default function About() {
   return (
