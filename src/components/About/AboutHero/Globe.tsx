@@ -10,14 +10,16 @@ export function Globe() {
 
     const globe = createGlobe(canvasRef.current, {
       devicePixelRatio: 2,
-      width: 700 * 2,
-      height: 700 * 2,
+      width: 800 * 2,
+      height: 800 * 2,
       phi: 0,
       theta: 0.2,
       dark: 1,
       diffuse: 1.2,
       mapSamples: 16000,
       mapBrightness: 6,
+      scale: 0.90,
+      offset: [0, -300],
       baseColor: [0.3, 0.3, 0.3],
       markerColor: [0.43, 0.02, 0.95],
       glowColor: [0.7, 0.7, 0.7],
@@ -43,10 +45,10 @@ export function Globe() {
       <h2 className='text-[22px] font-bold mb-4'>
         My Special Place<span className='text-text-accent'>.</span>
       </h2>
-      <div className='bg-[#B8B8B8] rounded-[20px] h-75 overflow-hidden'>
+      <div className='h-70 overflow-hidden bg-[#B8B8B8] rounded-[20px]'>
         <canvas
           ref={canvasRef}
-          style={{ width: 700, height: 700, maxWidth: '100%', aspectRatio: 1 }}
+          style={{ width: 800, height: 800, maxWidth: '100%', aspectRatio: 1 }}
         />
       </div>
     </div>

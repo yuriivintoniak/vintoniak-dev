@@ -14,19 +14,22 @@ export function AboutHero() {
         </p>
       </div>
       <div className='flex justify-between pt-16'>
-        <div className='max-w-125'>
+        <div>
           <h2 className='text-[22px] font-bold mb-4'>
             My Stack<span className='text-text-accent'>.</span>
           </h2>
-          <div className='h-75 bg-[#B8B8B8] rounded-[20px] flex flex-col justify-center gap-7'>
+          <div className='max-w-100 h-70 bg-[#B8B8B8] rounded-[20px] flex flex-col justify-center gap-7'>
             {stackData.map((category) => (
-              <div key={category.title} className="overflow-hidden flex gap-4">
+              <div key={category.title} className="overflow-hidden flex">
                 {[1, 2].map((i) => (
-                  <div key={i} className="animate-marquee flex gap-4">
+                  <div
+                    key={i}
+                    className={`flex ${category.title === 'Backend' ? 'animate-marquee-right' : 'animate-marquee-left'}`}
+                  >
                     {category.items.map((item, j) => (
                       <span
                         key={j}
-                        className='text-[#e6e6e6] bg-[#1a1a1a] py-3 px-7 rounded-xl whitespace-nowrap'
+                        className='mx-2 py-3 px-7 text-[#e6e6e6] bg-[#1a1a1a] rounded-xl whitespace-nowrap'
                       >
                         {item}
                       </span>
