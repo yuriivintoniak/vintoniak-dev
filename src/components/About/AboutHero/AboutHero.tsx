@@ -1,5 +1,5 @@
 import { Globe } from './Globe'
-import { stackData } from './stackData'
+import { stackData } from './stack.data'
 import { StarSeparator } from './StarSeparator'
 
 export function AboutHero() {
