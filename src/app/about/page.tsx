@@ -15,7 +15,7 @@ export default function About() {
       <div className='sm:min-h-screen flex items-center'>
         <Skills />
       </div>
-      <div className='min-h-screen flex items-center'>
+      <div className='pb-20 sm:min-h-screen flex items-center'>
         <Journey />
       </div>
     </section>
