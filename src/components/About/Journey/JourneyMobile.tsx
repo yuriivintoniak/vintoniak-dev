@@ -9,10 +9,7 @@ import { journeyData } from './journey.data'
 
 export function JourneyMobile() {
   return (
-    <div className='lg:hidden w-full pt-10 sm:pt-0'>
-      <h2 className='text-3xl 2xs:text-[44px] sm:text-[56px] font-bold mb-5'>
-        Journey<span className='text-text-accent'>.</span>
-      </h2>
+    <div className='lg:hidden'>
       <Accordion type='single' defaultValue="Team Projects">
         {journeyData.map((item, index) => (
           <AccordionItem
