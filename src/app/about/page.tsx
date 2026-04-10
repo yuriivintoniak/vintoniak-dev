@@ -1,4 +1,5 @@
 import { Skills } from '@/components/About/Skills/Skills'
+import { Journey } from '@/components/About/Journey/Journey'
 import { MyStory } from '@/components/About/MyStory/MyStory'
 import { AboutHero } from '@/components/About/AboutHero/AboutHero'
 
@@ -13,6 +14,9 @@ export default function About() {
       </div>
       <div className='sm:min-h-screen flex items-center'>
         <Skills />
+      </div>
+      <div className='pb-20 sm:min-h-screen flex items-center'>
+        <Journey />
       </div>
     </section>
   )
