@@ -21,9 +21,9 @@ export default function Home() {
           I'll help you build websites your users will like.
         </p>
         <div className='flex flex-col xs:flex-row gap-4 font-semibold'>
-          <button className='btn text-background bg-text-accent hover:bg-[#8A37F5]'>
+          <Link href='/contacts' className='btn text-background bg-text-accent hover:bg-[#8A37F5]'>
             Contact me
-          </button>
+          </Link>
           <Link href='/projects' className='btn border hover:text-background hover:bg-foreground'>
             View my work
           </Link>
