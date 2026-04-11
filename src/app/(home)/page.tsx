@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { BASE_PATH } from '@/lib/config'
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
       </div>
       <div className='inline-block p-0 sm:p-10 rounded-full border border-text-accent/40'>
         <Image
-          src='/avatar.jpg'
+          src={`${BASE_PATH}/avatar.jpg`}
           width={380}
           height={380}
           className='avatar'
