@@ -1,15 +1,15 @@
 import { ICONS, SOCIALS } from './constants'
 
-export function ContactLinks() {
+export function ContactsLinks() {
   return (
-    <div className='pl-8'>
-      <h3 className='text-4xl text-text-accent'>
-        I am open for job opportunities.
+    <div className='flex-1'>
+      <h3 className='text-3xl text-text-accent leading-normal'>
+        Looking for job opportunities.
       </h3>
-      <p className='text-2xl text-text-primary pt-2'>
+      <p className='text-xl text-text-primary'>
         My inbox is always open for collaboration or interviews.
       </p>
-      <div className='flex flex-col gap-4 mt-16 text-2xl text-text-primary'>
+      <div className='flex flex-col gap-4 mt-16 text-xl text-text-primary'>
         {SOCIALS.map((social) => {
           const Icon = ICONS[social.icon]
 
@@ -19,7 +19,7 @@ export function ContactLinks() {
               href={social.url}
               target='_blank'
               rel='noopener noreferrer'
-              className='flex items-center gap-3'
+              className='w-fit flex items-center gap-3'
             >
               <Icon />
               <span>{social.nickname}</span>

@@ -4,7 +4,7 @@ export const MailIcon = () => {
       viewBox="0 0 24 24"
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
-      className="h-12 w-12 text-foreground hover:text-red-400 transition-colors duration-500 ease-in-out"
+      className="h-10 w-10 text-foreground hover:text-red-400 transition-colors duration-500 ease-in-out"
     >
       <path
         fillRule="evenodd"

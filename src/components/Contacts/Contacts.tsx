@@ -1,4 +1,5 @@
-import { ContactLinks } from './ContactsLinks'
+import { ContactsForm } from './ContactsForm'
+import { ContactsLinks } from './ContactsLinks'
 
 export function Contacts() {
   return (
@@ -11,7 +12,10 @@ export function Contacts() {
           {'{'}
         </span>
       </div>
-      <ContactLinks />
+      <div className='flex gap-12 pl-8'>
+        <ContactsLinks />
+        <ContactsForm />
+      </div>
       <div className='mt-5'>
         <span className='sm:text-[56px] text-text-accent'>
           {'}'}

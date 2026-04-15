@@ -39,6 +39,29 @@
     @apply text-center py-3 px-6 rounded-lg font-semibold;
     @apply xs:max-lg:flex-1 flex items-center justify-center;
   }
+
+  .label {
+    @apply w-full flex flex-col text-xl text-text-primary;
+  }
+
+  .input,
+  .textarea {
+    @apply border border-text-primary rounded-lg px-4 py-2;
+    @apply placeholder:text-text-primary;
+    @apply focus:outline-none focus:ring-2 focus:ring-text-primary focus:border-transparent;
+  }
+
+  .submit-btn {
+    @apply text-background bg-text-accent;
+    @apply rounded-lg px-6 py-3 text-2xl font-medium;
+  }
+
+  .submit-btn:hover {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .15s;
+    box-shadow: 0.35em 0 0.75em 0.05em var(--text-accent);
+  }
 }
 
 html {
@@ -56,6 +79,14 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: var(--text-primary) !important;
 }
 
 @keyframes marquee {
