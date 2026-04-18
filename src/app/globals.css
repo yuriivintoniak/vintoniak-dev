@@ -51,6 +51,11 @@
     @apply focus:outline-none focus:ring-2 focus:ring-text-primary focus:border-transparent;
   }
 
+  .input-error,
+  .textarea-error {
+    @apply border-[#f36d97] focus:border-transparent;
+  }
+
   .submit-btn {
     @apply text-background bg-text-accent flex items-center justify-center;
     @apply rounded-lg px-6 py-3 text-2xl font-medium;

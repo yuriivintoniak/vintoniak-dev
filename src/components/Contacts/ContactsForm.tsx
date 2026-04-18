@@ -12,8 +12,10 @@ export function ContactsForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors }
-  } = useForm<ContactFormValues>()
+    formState: { errors: formErrors }
+  } = useForm<ContactFormValues>({
+    shouldFocusError: false,
+  })
 
   const [isLoading, setIsLoading] = useState(false)
 
@@ -36,7 +38,7 @@ export function ContactsForm() {
         <input
           type='text'
           {...register('name', { required: true })}
-          className='input'
+          className={`input ${formErrors.name ? 'input-error' : ''}`}
         />
       </label>
       <label className='label'>
@@ -44,14 +46,16 @@ export function ContactsForm() {
         <input
           type='email'
           {...register('email', { required: true })}
-          className='input'
+          className={`input ${formErrors.email ? 'input-error' : ''}`}
         />
       </label>
       <label className='label'>
         Message
         <textarea
           {...register('message', { required: true })}
-          className='textarea [scrollbar-width:none]'
+          className={`textarea [scrollbar-width:none] ${
+            formErrors.message ? 'textarea-error' : ''
+          }`}
         />
       </label>
       <button
