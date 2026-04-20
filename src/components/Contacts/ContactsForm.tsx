@@ -12,6 +12,7 @@ export function ContactsForm() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors: formErrors }
   } = useForm<ContactFormValues>({
     shouldFocusError: false,
@@ -19,13 +20,37 @@ export function ContactsForm() {
 
   const [isLoading, setIsLoading] = useState(false)
 
-  const sendEmail = (data: ContactFormValues) => {
+  const sendEmail = async (data: ContactFormValues) => {
     setIsLoading(true)
-    console.log(data)
-    setTimeout(() => {
-      alert('Message sent successfully!')
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: '9745fa71-8031-4a27-9266-8947bb173c20',
+          name: data.name,
+          email: data.email,
+          message: data.message,
+        }),
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        alert('Message sent successfully!')
+        reset()
+      } else {
+        alert('Something went wrong')
+      }
+    } catch (error) {
+      alert('Request failed')
+    } finally {
       setIsLoading(false)
-    }, 5000)
+    }
   }
 
   return (
