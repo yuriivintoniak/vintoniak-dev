@@ -108,7 +108,7 @@
   }
 
   .label {
-    @apply w-full flex flex-col text-xl text-text-primary;
+    @apply w-full flex flex-col lg:text-xl text-text-primary;
   }
 
   .input,
@@ -125,7 +125,7 @@
 
   .submit-btn {
     @apply text-background bg-text-accent flex items-center justify-center;
-    @apply rounded-lg px-6 py-3 text-2xl font-medium;
+    @apply rounded-lg px-6 py-1 lg:py-3 text-xl lg:text-2xl font-medium;
     @apply disabled:pointer-events-none disabled:opacity-40;
   }
 

@@ -8,7 +8,7 @@ export type ContactFormValues = {
   message: string
 }
 
-export function ContactsForm() {
+export function ContactForm() {
   const {
     register,
     handleSubmit,
@@ -56,7 +56,7 @@ export function ContactsForm() {
   return (
     <form
       onSubmit={handleSubmit(sendEmail)}
-      className='max-w-152 flex-1 flex flex-col gap-8'
+      className='max-w-160 flex-1 flex flex-col gap-2 lg:gap-8'
     >
       <label className='label'>
         Name
