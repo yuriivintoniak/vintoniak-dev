@@ -166,6 +166,34 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: var(--text-primary) !important;
 }
 
+.button-hamburger {
+  overflow: hidden;
+  scale: 1.25;
+}
+
+.button-hamburger .hamburger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  transition: translate 0.5s, rotate 0.5s;
+}
+
+.button-hamburger[aria-expanded="true"] .hamburger {
+  translate: -14px -17px;
+  rotate: 0.125turn;
+}
+
+.button-hamburger .line {
+  transition: 0.5s;
+  stroke-dasharray: 60 31 60 300;
+}
+
+.button-hamburger[aria-expanded="true"] .line {
+  stroke-dasharray: 60 105 60 300;
+  stroke-dashoffset: -90;
+}
+
 @keyframes marquee {
   to {
     transform: translateX(-100%);
