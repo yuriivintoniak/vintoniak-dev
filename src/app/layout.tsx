@@ -29,7 +29,7 @@ export default function RootLayout({
             {children}
           </main>
         </div>
-        <Footer />
+        <Footer className='hidden lg:block' />
       </body>
     </html>
   )

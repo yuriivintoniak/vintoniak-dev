@@ -224,6 +224,18 @@ input:-webkit-autofill:active {
   }
 }
 
+/* right-edge glow strip for mobile menu content */
+.menu-edge-glow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  aspect-ratio: 1 / 1;
+  width: calc(var(--spacing) * 2);
+  height: 100%;
+  filter: blur(50px);
+  background: var(--text-accent);
+}
+
 /* horizontal marquee scrolling animations */
 @keyframes marquee {
   to {
