@@ -34,7 +34,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
           </ul>
           <div className='menu-edge-glow' />
         </div>
-        <Footer className='block lg:hidden' />
+        <Footer className='mt-6 block lg:hidden' />
       </div>
     </aside>
   )

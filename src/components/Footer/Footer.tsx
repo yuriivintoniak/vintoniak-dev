@@ -22,7 +22,14 @@ const socialLinks = [
 
 export function Footer({ className }: { className?: string }) {
   return (
-    <footer className={cn('lg:px-4 py-8', className)}>
+    <footer className={cn(
+      'relative overflow-y-clip lg:overflow-visible lg:px-4 lg:py-8',
+      className
+    )}>
+      <div className='block lg:hidden pb-8'>
+        <hr className="footer-divider" />
+        <hr className="footer-divider bg-text-accent blur-[20px]" />
+      </div>
       <div className='flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between'>
         <div className='flex flex-col gap-4 lg:gap-2'>
           <div className={cn(

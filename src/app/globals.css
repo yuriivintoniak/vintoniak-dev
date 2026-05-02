@@ -236,6 +236,15 @@ input:-webkit-autofill:active {
   background: var(--text-accent);
 }
 
+/* full-width overflow footer divider */
+.footer-divider {
+  position: absolute;
+  left: -10%;
+  color: var(--text-accent);
+  width: 200vw;
+  height: calc(var(--spacing) * 2);
+}
+
 /* horizontal marquee scrolling animations */
 @keyframes marquee {
   to {
