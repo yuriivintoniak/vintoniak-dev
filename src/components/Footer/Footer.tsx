@@ -23,7 +23,7 @@ const socialLinks = [
 export function Footer({ className }: { className?: string }) {
   return (
     <footer className={cn(
-      'relative overflow-y-clip lg:overflow-visible lg:px-4 lg:py-8',
+      'relative overflow-y-clip lg:overflow-visible lg:snap-center lg:px-4 lg:py-8',
       className
     )}>
       <div className='block lg:hidden pb-8'>

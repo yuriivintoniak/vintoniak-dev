@@ -1,6 +1,8 @@
 import Link from 'next/link'
+import { cn } from '@/lib/utils'
 import { MENU_LINKS } from './menuLinks'
 import { Footer } from '../Footer/Footer'
+import { usePathname } from 'next/navigation'
 
 type MobileMenuProps = {
   open: boolean
@@ -8,6 +10,8 @@ type MobileMenuProps = {
 }
 
 export function MobileMenu({ open, onClose }: MobileMenuProps) {
+  const pathname = usePathname()
+
   return (
     <aside className={`aside ${open ? 'h-full' : 'h-0 overflow-hidden'}`}>
       <div className={`menu-content ${open ? 'opacity-100' : 'opacity-0'}`}>
@@ -22,7 +26,10 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                 <Link
                   href={link.href}
                   onClick={onClose}
-                  className='flex gap-2'
+                  className={cn(
+                    'flex gap-2',
+                    pathname === link.href && 'text-text-accent'
+                  )}
                 >
                   <span className='text-text-accent'>
                     {index}.
