@@ -47,7 +47,11 @@ export function ContactForm() {
         alert('Something went wrong')
       }
     } catch (error) {
-      alert('Request failed')
+      alert(
+        error instanceof Error
+          ? `Request failed: ${error.message}`
+          : 'Request failed: unknown error'
+      )
     } finally {
       setIsLoading(false)
     }
