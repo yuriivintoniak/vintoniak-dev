@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
+import { useEffect } from 'react'
 import { MENU_LINKS } from './menuLinks'
 import { Footer } from '../Footer/Footer'
 import { usePathname } from 'next/navigation'
@@ -11,6 +12,14 @@ type MobileMenuProps = {
 
 export function MobileMenu({ open, onClose }: MobileMenuProps) {
   const pathname = usePathname()
+
+  useEffect(() => {
+    document.body.classList.toggle('menu-open', open)
+
+    return () => {
+      document.body.classList.remove('menu-open')
+    }
+  }, [open])
 
   return (
     <aside className={`aside ${open ? 'h-full' : 'h-0 overflow-hidden'}`}>
