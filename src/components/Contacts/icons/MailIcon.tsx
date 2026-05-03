@@ -1,10 +1,22 @@
-export const MailIcon = () => {
+import { cn } from "@/lib/utils"
+
+export const MailIcon = ({
+  className,
+  hoverEffect = true,
+}: {
+  className?: string;
+  hoverEffect?: boolean;
+}) => {
   return (
     <svg
       viewBox="0 0 24 24"
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
-      className="h-8 w-8 lg:h-10 lg:w-10 text-foreground hover:text-red-400 transition-colors duration-500 ease-in-out"
+      className={cn(
+        "text-foreground",
+        hoverEffect && "hover:text-red-400 transition-colors duration-500 ease-in-out",
+        className
+      )}
     >
       <path
         fillRule="evenodd"

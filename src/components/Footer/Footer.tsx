@@ -1,25 +1,65 @@
-import Link from 'next/link'
+import { cn } from '@/lib/utils'
+import { Comfortaa } from 'next/font/google'
+import { GithubIcon } from '@/components/Contacts/icons/GithubIcon'
+import { LinkedinIcon } from '@/components/Contacts/icons/LinkedinIcon'
 
-export function Footer() {
-  const year = new Date().getFullYear();
+const comfortaa = Comfortaa({
+  display: 'swap',
+  subsets: ['latin'],
+  weight: ['400', '500']
+})
 
+const socialLinks = [
+  {
+    href: 'https://github.com/yuriivintoniak',
+    icon: GithubIcon
+  },
+  {
+    href: 'https://www.linkedin.com/in/yuriivintoniak/',
+    icon: LinkedinIcon
+  }
+]
+
+export function Footer({ className }: { className?: string }) {
   return (
-    <footer className='py-2 text-xl text-text-primary font-semibold'>
-      <div className='flex flex-col md:flex-row items-center justify-between gap-5 md:gap-0 p-4'>
-        <div className='text-foreground font-bold'>
-          <Link href='/'>LucaDCZ</Link>
-          <span className='text-text-accent text-2xl'>.</span>
+    <footer className={cn(
+      'relative overflow-y-clip lg:overflow-visible lg:px-4 lg:py-8',
+      className
+    )}>
+      <div className='block lg:hidden pb-8'>
+        <hr className="footer-divider" />
+        <hr className="footer-divider bg-text-accent blur-[20px]" />
+      </div>
+      <div className='flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between'>
+        <div className='flex flex-col gap-4 lg:gap-2'>
+          <div className={cn(
+            'text-[52px] lg:text-4xl text-text-accent font-medium leading-none',
+            comfortaa.className
+          )}>
+            Yura
+          </div>
+          <div className='text-lg lg:text-xl'>
+            Built by me
+          </div>
         </div>
-        <h6 className='text-center'>
-          Copyright {year} {" "}
-          <br className='inline 2xs:hidden' />
-          © Yurii Vintoniak
-        </h6>
-        <h6 className='text-center'>
-          Designed By {" "}
-          <br className='inline 2xs:hidden' />
-          <span className='text-text-accent'>Luca Da Corte</span>
-        </h6>
+        <div className='flex lg:flex-col gap-4 lg:gap-2'>
+          {socialLinks.map(({ href, icon: Icon }) => (
+            <a
+              key={href}
+              href={href}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Icon className='h-8 w-8' hoverEffect={false} />
+            </a>
+          ))}
+        </div>
+        <a
+          href='mailto:yurivintonyak@gmail.com'
+          className='text-text-accent text-lg lg:text-xl underline'
+        >
+          yurivintonyak@gmail.com
+        </a>
       </div>
     </footer>
   )

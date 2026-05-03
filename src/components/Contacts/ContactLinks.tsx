@@ -23,7 +23,7 @@ export function ContactLinks() {
               rel='noopener noreferrer'
               className='w-fit flex items-center gap-2 lg:gap-3'
             >
-              <Icon />
+              <Icon className='h-8 w-8 lg:h-10 lg:w-10' />
               <span>{social.nickname}</span>
             </a>
           )
